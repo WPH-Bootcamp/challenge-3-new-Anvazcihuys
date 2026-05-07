@@ -3,10 +3,1465 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
-    <link href="./output.css" rel="stylesheet" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body>
-    <!-- Mulai coding di sini -->
+  <body class="font-family/font-family-display text-[#0a0d12]">
+    <!-- 1. Header Start -->
+    <header
+      class="fixed top-0 left-0 z-30 flex h-21 w-full items-center justify-around bg-white/70 shadow-md backdrop-blur-md dark:bg-black/70 dark:text-white"
+    >
+      <nav class="flex cursor-pointer">
+        <!-- Toggle dark mode -->
+        <button
+          id="theme-toggle"
+          class="toggle cursor-pointer rounded-4xl bg-gray-200 px-4 py-2 text-sm font-bold text-black dark:bg-gray-700 dark:text-white"
+        >
+          dark/light
+        </button>
+        <!-- Logo -->
+        <a href="#" class="flex items-center pl-4">
+          <img
+            class="logo"
+            src="/assets/images/logo-symbol.png"
+            alt="your logo"
+          />
+          <span class="your-logo flex items-center pl-2 font-bold"
+            >Your Logo</span
+          >
+        </a>
+      </nav>
+      <!-- Navigation Menu -->
+      <nav class="menu xs:custom-header-nav cursor-pointer space-x-5">
+        <a href="#About">About</a>
+        <a href="#Service">Service</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Testimonials">Testimonials</a>
+        <a href="#FAQ">FAQ</a>
+      </nav>
+      <!-- Button Let's Talk -->
+      <button
+        onclick="scrollToSection('Form')"
+        class="btn-header h-11 w-49.25 cursor-pointer rounded-full bg-[#FF623E] text-white active:bg-blue-400"
+      >
+        Let's Talk
+      </button>
+      <!-- Hamburger Menu -->
+      <label class="hidden max-[393px]:block">
+        <input type="checkbox" class="menu-toggle" />
+        <div class="hamburger invert filter dark:filter-none">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </header>
+    <!-- Mobile Menu -->
+    <nav
+      id="mobileMenu"
+      class="mobile-menu fixed bg-white/70 shadow-md backdrop-blur-md dark:bg-black/70 dark:text-white"
+    >
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Portolio</a>
+      <a href="#">Testimonials</a>
+      <a href="#">FAQ</a>
+      <button onclick="scrollToSection('Form')" class="mobile-button">
+        Let's Talk
+      </button>
+    </nav>
+    <!-- 1. Header End -->
+
+    <!-- 2. Hero Section Start -->
+    <main>
+      <section
+        id="About"
+        class="flex min-h-screen w-full items-center justify-center overflow-hidden max-[393px]:flex-col dark:bg-black"
+      >
+        <!-- Text Content -->
+        <article class="p-4">
+          <h1
+            class="pb-4 text-6xl font-bold text-black max-[393px]:pt-[100px] max-[393px]:text-[35px] dark:text-white"
+          >
+            Your Tech Partner for <br />
+            <span class="text-[#FF6C37]">Smarter Growth</span>
+          </h1>
+          <h2
+            class="pb-8 text-xl text-black max-[393px]:w-[361px] max-[393px]:text-[18px] dark:text-white"
+          >
+            We deliver tailored IT solutions to help you scale with speed and
+            confidence.
+          </h2>
+          <!-- Call-to-action Button -->
+          <button
+            onclick="scrollToSection('Form')"
+            class="h-12 w-[200px] cursor-pointer rounded-full bg-[#FF623E] text-white active:bg-blue-400 max-[393px]:w-[361px]"
+          >
+            Let’s Talk
+          </button>
+        </article>
+        <!-- Light Mode Image -->
+        <figure>
+          <img
+            class="block h-[600px] w-auto pt-[20px] max-[393px]:h-[391px] max-[393px]:pt-[20px] dark:hidden"
+            src="/assets/images/Image Hero light.png"
+            alt="handphone light mode"
+          />
+        </figure>
+        <!-- Dark Mode Image -->
+        <figure>
+          <img
+            class="hidden h-[600px] w-auto pt-[20px] max-[393px]:h-[391px] max-[393px]:pt-[20px] dark:block"
+            src="/assets/images/Image Hero dark.png"
+            alt="handphone dark mode"
+          />
+        </figure>
+      </section>
+    </main>
+    <!-- 2. Hero Section End -->
+
+    <!-- 3. Brand Section Start -->
+    <section
+      id="Service"
+      class="relative z-20 flex w-full flex-col items-center max-[393px]:h-[200px] dark:bg-black"
+    >
+      <h3
+        class="mb-2 pb-13 text-xl max-[393px]:w-[393px] max-[393px]:pt-[20px] max-[393px]:pl-3 max-[393px]:text-[16px] max-[393px]:font-bold dark:text-white"
+      >
+        Trusted by Global Innovators & Leading Brands
+      </h3>
+      <div
+        class="animate-scroll-left flex w-full space-x-10 overflow-hidden whitespace-nowrap grayscale max-[393px]:w-[1500px]"
+        role="list"
+      >
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/adobe.png"
+            alt="adobe company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/upwork.png"
+            alt="upwork company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/zoom.png"
+            alt="zoom company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/postman.png"
+            alt="postman company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/databricks.png"
+            alt="databricks company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/airbnb.png"
+            alt="airbnb company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/dropbox.png"
+            alt="dropbox company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/paypal.png"
+            alt="paypal company"
+          />
+        </figure>
+        <figure>
+          <img
+            class="h-10 w-auto"
+            src="/assets/images/netflix.png"
+            alt="netflix company"
+          />
+        </figure>
+      </div>
+    </section>
+    <!-- 3. Brand Section End -->
+
+    <!-- 4. Achievement Section Start -->
+    <section
+      id="Projects"
+      class="flex h-[598px] w-full flex-col items-center pt-32 max-[393px]:h-[558px] max-[393px]:pt-0 dark:bg-black"
+    >
+      <!-- Text -->
+      <article>
+        <h2
+          class="text-center text-4xl font-bold max-[393px]:text-3xl dark:text-white"
+        >
+          End-to-End IT Solutions<span class="inline max-[393px]:block"
+            >That Drive Results</span
+          >
+        </h2>
+        <h3
+          class="pt-8 pb-24 text-center text-xl text-[#717680] max-[393px]:pb-0 max-[393px]:text-[15px]"
+        >
+          From strategy to execution, we deliver solutions that
+          <span class="inline max-[393px]:block">grow your business.</span>
+        </h3>
+      </article>
+
+      <!-- Circle Stats -->
+      <article
+        class="flex content-center items-center space-x-10 max-[393px]:mt-[-80px] max-[393px]:grid max-[393px]:scale-[0.65] max-[393px]:grid-cols-2 max-[393px]:place-items-center max-[393px]:gap-x-[240px] max-[393px]:space-x-0 max-[393px]:gap-y-12 max-[393px]:p-[20px] dark:text-white"
+      >
+        <dl
+          class="grid h-[275px] w-[275px] content-center justify-center rounded-full border-4 border-[#DEDCDC] text-center"
+        >
+          <dt class="text-5xl font-bold text-[#FF623E]">50+</dt>
+          <dd class="text-lg font-semibold">Projects Delivered</dd>
+        </dl>
+
+        <dl
+          class="grid h-[275px] w-[275px] content-center justify-center rounded-full border-4 border-[#DEDCDC] text-center"
+        >
+          <dt class="text-5xl font-bold text-[#FF623E]">5+</dt>
+          <dd class="text-lg font-semibold">Years of Experience</dd>
+        </dl>
+
+        <dl
+          class="grid h-[275px] w-[275px] content-center justify-center rounded-full border-4 border-[#DEDCDC] text-center"
+        >
+          <dt class="text-5xl font-bold text-[#FF623E]">10+</dt>
+          <dd class="text-lg font-semibold">Industry Awards Won</dd>
+        </dl>
+
+        <dl
+          class="grid h-[275px] w-[275px] content-center justify-center rounded-full border-4 border-[#DEDCDC] text-center"
+        >
+          <dt class="text-5xl font-bold text-[#FF623E]">100%</dt>
+          <dd class="text-lg font-semibold">Client Satisfaction Rate</dd>
+        </dl>
+      </article>
+    </section>
+    <!-- 4. Achievement Section End -->
+
+    <!-- 5.Flow Process Section Start-->
+    <section
+      class="flex w-full flex-col gap-16 bg-white px-[140px] py-20 max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black"
+    >
+      <div class="flex flex-col gap-[11px] text-center">
+        <!-- Text -->
+        <h2
+          class="text-[40px] leading-14 font-bold text-black max-[393px]:w-[361px] max-[393px]:text-4xl dark:text-white"
+        >
+          Our Process
+        </h2>
+        <p class="text-[18px] leading-8 font-medium text-[#717680]">
+          Clear steps. Smart execution. Results you can count on.
+        </p>
+      </div>
+      <div
+        class="relative grid grid-cols-[1fr_48px_1fr] items-center gap-4 max-[393px]:grid-cols-[48px_1fr]"
+      >
+        <!-- Line 1 -->
+        <div
+          class="flex justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-2 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex cursor-pointer flex-col">
+            <p class="text-xl leading-[34px] font-bold">
+              Discovery & Consultation
+            </p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Understand Your Needs & Goals
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-1"
+        >
+          1
+        </div>
+        <div class="max-[393px]:hidden"></div>
+        <!-- Line 2 -->
+        <div class="max-[393px]:hidden"></div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-3"
+        >
+          2
+        </div>
+        <div
+          class="flex justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-4 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex cursor-pointer flex-col">
+            <p class="text-xl leading-[34px] font-bold">Planning & Strategy</p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Build a Clear, Scalable Roadmap
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <!-- Line 3 -->
+        <div
+          class="flex justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-6 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex cursor-pointer flex-col">
+            <p class="text-xl leading-[34px] font-bold">Design & Prototyping</p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Craft UX That Converts
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-5"
+        >
+          3
+        </div>
+        <div class="max-[393px]:hidden"></div>
+        <!-- Line 4 -->
+        <div class="max-[393px]:hidden"></div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-7"
+        >
+          4
+        </div>
+        <div
+          class="flex cursor-pointer justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-8 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex flex-col">
+            <p class="text-xl leading-[34px] font-bold">
+              Development & Implementation
+            </p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Deliver With Speed & Precision
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <!-- Line 5 -->
+        <div
+          class="flex justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-10 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex cursor-pointer flex-col">
+            <p class="text-xl leading-[34px] font-bold">
+              Testing & Optimization
+            </p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Ensure Quality at Every Step
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-9"
+        >
+          5
+        </div>
+        <div class="max-[393px]:hidden"></div>
+        <!-- Line 6 -->
+        <div class="max-[393px]:hidden"></div>
+        <div
+          class="z-20 h-12 rounded-full bg-[#ff623e] text-center leading-12 text-white max-[393px]:order-11"
+        >
+          6
+        </div>
+        <div
+          class="flex cursor-pointer justify-between rounded-2xl border border-[#DEDCDC] bg-[#FAFAFA] p-6 max-[393px]:order-12 dark:border-[#181D27] dark:bg-[#0A0D12] dark:text-white"
+        >
+          <div class="flex flex-col">
+            <p class="text-xl leading-[34px] font-bold">Launch & Growth</p>
+            <p class="text-base leading-[30px] font-medium text-[#717680]">
+              Scale, Measure & Improve Continuously
+            </p>
+          </div>
+          <div class="basis-[12px]">
+            <img
+              class="h-3 w-8 scale-200 text-[#0A0D12] invert filter dark:filter-none"
+              src="/assets/images/chevron-up.png"
+            />
+          </div>
+        </div>
+        <!-- Vertical Line -->
+        <div
+          class="absolute top-[8.5%] left-1/2 -z-0 h-10/12 w-[1px] bg-[#DEDCDC] max-[393px]:left-[24px] dark:bg-[#181D27]"
+        ></div>
+      </div>
+    </section>
+    <!-- 5.Flow Process Section End -->
+
+    <!-- 6.Service Section Start -->
+    <section
+      class="flex w-full flex-col gap-16 px-[140px] py-20 text-black max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black dark:text-white"
+    >
+      <div class="flex flex-col gap-[11px] text-center">
+        <h2
+          class="text-[40px] leading-14 font-bold max-[393px]:w-full max-[393px]:text-3xl"
+        >
+          Smart IT Solutions That Grow With You
+        </h2>
+        <p class="text-[18px] leading-8 font-medium text-[#717680]">
+          Tailored tech to boost efficiency, security, and results.
+        </p>
+      </div>
+      <!-- Card Web Development -->
+      <div class="grid grid-cols-3 gap-x-5 gap-y-10 max-[393px]:grid-cols-1">
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div><img src="/assets/images/Website.png" alt="website" /></div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">Web Development</h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Build fast, scalable, and SEO-friendly websites.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card Mobile App Development -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/Mobile App Development.png"
+                alt="Mobile App Development"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">
+                Mobile App Development
+              </h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Native & cross-platform apps tailored to user needs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card UI/UX Design -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img src="/assets/images/UX Design.png" alt="UX Design" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">UI/UX Design</h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Delight users with intuitive and beautiful interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card Cloud Solutions -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/Cloud Solutions.png"
+                alt="Cloud Solutions"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">Cloud Solutions</h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Secure and flexible cloud infrastructure for your growth.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card Software Development -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/Software Development.png"
+                alt="Software Development"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">
+                Software Development
+              </h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Custom solutions built around your business logic.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card IT Infrastructure -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/IT Infrastructure.png"
+                alt="IT Infrastructure"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">
+                IT Infrastructure
+              </h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Scale your backend with reliable tech foundations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card Cybersecurity Services -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/Cybersecurity Services.png"
+                alt="Cybersecurity Services"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">
+                Cybersecurity Services
+              </h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Stay protected with enterprise-grade security.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card QA Solutions -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img src="/assets/images/QASolutions.png" alt="QA Solutions" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">QA Solutions</h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Ensure performance with rigorous testing frameworks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card IT Consulting & Support -->
+        <div
+          class="cursor-pointer rounded-2xl border border-[#dcdcdc] px-5 pb-5"
+        >
+          <div class="mt-[-30px] flex flex-col gap-5">
+            <div>
+              <img
+                src="/assets/images/IT Consulting & Support.png"
+                alt="IT Consulting & Support"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl leading-[34px] font-bold">
+                IT Consulting & Support
+              </h3>
+              <p class="text-base leading-[30px] font-medium text-[#717680]">
+                Make smarter tech decisions with expert guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 6.Service Section End -->
+
+    <!-- 7. Built for Your Industry Section Start -->
+    <section
+      class="flex w-full flex-col gap-16 bg-white px-[140px] py-20 text-black max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black dark:text-white"
+    >
+      <!-- Judul & Subjudul -->
+      <div class="flex flex-col gap-[11px]">
+        <h2 class="text-[40px] leading-14 font-bold max-[393px]:text-[33px]">
+          Built for Your Industry
+        </h2>
+        <p class="text-[18px] leading-8 font-medium text-[#717680]">
+          We’ve helped companies across industries launch smarter, faster, and
+          more securely.
+        </p>
+      </div>
+      <!-- Konten Utama -->
+      <div class="flex gap-16 max-[393px]:flex-col max-[393px]:gap-10">
+        <!-- Kolom kiri: Daftar industri -->
+        <div
+          class="flex shrink-0 basis-[256px] flex-col gap-6 max-[393px]:basis-[156px]"
+        >
+          <div
+            class="industry-tab flex cursor-pointer items-center gap-2"
+            data-target="fintech"
+          >
+            <div
+              class="indicator h-[34px] w-[4px] rounded-[100px] bg-[#ff623e]"
+            ></div>
+            <h3 class="text-xl leading-[34px] font-bold">Fintech</h3>
+          </div>
+          <div
+            class="industry-tab flex cursor-pointer items-center gap-2"
+            data-target="ecommerce"
+          >
+            <div
+              class="indicator h-[34px] w-[4px] rounded-[100px] bg-[#aaa]"
+            ></div>
+            <h3 class="text-xl leading-[34px] font-bold">E-Commerce</h3>
+          </div>
+          <div
+            class="industry-tab flex cursor-pointer items-center gap-2"
+            data-target="healthcare"
+          >
+            <div
+              class="indicator h-[34px] w-[4px] rounded-[100px] bg-[#aaa]"
+            ></div>
+            <h3 class="text-xl leading-[34px] font-bold">Healthcare</h3>
+          </div>
+        </div>
+        <!-- Kolom kanan: Deskripsi & Gambar -->
+        <div class="relative w-full">
+          <!-- Fintech -->
+          <div id="fintech" class="industry-card flex grow flex-col gap-5">
+            <p class="text-lg leading-8 font-medium max-[393px]:font-light">
+              We build secure, scalable, and compliant fintech solutions — from
+              digital wallets to core banking systems — tailored to modern
+              financial needs.
+            </p>
+            <img
+              class="rounded-3xl max-[393px]:h-[200px]"
+              src="/assets/images/Industry Image.png"
+              alt="Industry Image"
+            />
+          </div>
+          <!-- E-Commerce -->
+          <div
+            id="ecommerce"
+            class="industry-card flex hidden grow flex-col gap-5"
+          >
+            <p class="text-lg leading-8 font-medium max-[393px]:font-light">
+              Boost your online sales with fast, reliable platforms designed for
+              seamless shopping experiences, inventory management, and payment
+              integration.
+            </p>
+            <img
+              class="rounded-3xl max-[393px]:h-[200px]"
+              src="/assets/images/E-Commerce.png"
+              alt="E-Commerce Image"
+            />
+          </div>
+          <!-- Healthcare -->
+          <div
+            id="healthcare"
+            class="industry-card flex hidden grow flex-col gap-5"
+          >
+            <p class="text-lg leading-8 font-medium max-[393px]:font-light">
+              Empowering healthcare providers with digital solutions that
+              improve patient care, ensure data privacy, and streamline
+              operational workflows.
+            </p>
+            <img
+              class="rounded-3xl max-[393px]:h-[200px]"
+              src="/assets/images/Healthcare.png"
+              alt="Healthcare Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 7. Built for Your Industry Section End -->
+
+    <!-- 8.Portfolio Section Start -->
+    <section
+      class="flex w-full flex-col gap-16 bg-white px-[140px] py-20 text-black max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black dark:text-white"
+    >
+      <!-- Judul & Subjudul -->
+      <div class="flex flex-col gap-[11px] text-center">
+        <h2
+          class="text-[40px] leading-14 font-bold max-[393px]:text-3xl max-[393px]:font-medium"
+        >
+          From Vision to Launch! Projects We’re Proud Of
+        </h2>
+        <p
+          class="text-[18px] leading-8 font-medium text-[#717680] max-[393px]:text-[16px]"
+        >
+          Take a closer look at our recent work powering startups, enterprises,
+          and everything in between.
+        </p>
+      </div>
+      <!-- Portofolio Contents-->
+      <div
+        class="flex justify-center gap-5 max-[393px]:flex-col max-[393px]:items-center max-[393px]:gap-10"
+      >
+        <!-- Portofolio 1 -->
+        <div class="flex cursor-pointer flex-col gap-3">
+          <img src="../assets/images/portofilio1.png" />
+          <div class="flex flex-col">
+            <h3 class="text-base leading-[30px] font-medium text-[#ff623e]">
+              Landing Page
+            </h3>
+            <p class="text-xl leading-[34px] font-bold">Portofolio 1</p>
+          </div>
+        </div>
+        <!-- Portofolio 2 -->
+        <div class="flex cursor-pointer flex-col gap-3">
+          <img src="/assets/images/portofolio2.png" />
+          <div class="flex flex-col">
+            <h3 class="text-base leading-[30px] font-medium text-[#ff623e]">
+              Landing Page
+            </h3>
+            <p class="text-xl leading-[34px] font-bold">Portofolio 2</p>
+          </div>
+        </div>
+        <!-- Portofolio 3 -->
+        <div class="flex cursor-pointer flex-col gap-3">
+          <img src="/assets/images/portofilio1.png" />
+          <div class="flex flex-col">
+            <h3 class="text-base leading-[30px] font-medium text-[#ff623e]">
+              Landing Page
+            </h3>
+            <p class="text-xl leading-[34px] font-bold">Portofolio 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 8.Portfolio Section End -->
+
+    <!-- 9. Testimony Section Start -->
+    <section
+      id="Testimonials"
+      class="flex w-full flex-col gap-20 bg-white py-20 text-black max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black dark:text-white"
+    >
+      <!-- Judul -->
+      <div class="flex flex-col gap-[11px] text-center">
+        <h2
+          class="text-[40px] leading-14 font-bold max-[393px]:text-[30px] max-[393px]:font-medium"
+        >
+          What Partners Say About Working With Us
+        </h2>
+        <p
+          class="text-[18px] leading-8 font-medium text-[#717680] max-[393px]:text-[17px] max-[393px]:font-light"
+        >
+          Trusted voices. Real experiences. Proven results.
+        </p>
+      </div>
+      <!-- Card Container -->
+      <div
+        class="relative overflow-hidden pt-[25px] max-[393px]:h-[483px] max-[393px]:pt-0 max-[393px]:pt-8"
+      >
+        <!-- Slider Wrapper -->
+        <div
+          id="testimonialSlider"
+          class="flex flex-nowrap gap-[925px] pl-[465px] transition-transform duration-500 ease-in-out max-[393px]:w-max max-[393px]:gap-4 max-[393px]:pb-[60px] max-[393px]:pl-0"
+        >
+          <!-- Card 1 -->
+          <div
+            class="testimonial-card relative h-[292px] w-[594px] flex-shrink-0 rounded-[18px] bg-gradient-to-br from-[#ff6c37] to-[#dedcdc] p-[1px] max-[393px]:h-[284px] max-[393px]:w-[361px]"
+            data-index="0"
+          >
+            <div
+              class="relative h-full rounded-2xl bg-[#fafafa] dark:bg-[#0A0D12]"
+            >
+              <div class="flex flex-col gap-6 px-6 pt-6">
+                <div class="flex flex-col items-center gap-3">
+                  <div class="flex gap-1">
+                    <img src="/assets/images/Rating.png" />
+                  </div>
+                  <p class="text-center text-lg leading-8 font-semibold">
+                    “Working with this team was a game-changer for our project.
+                    They understood our vision and turned it into reality
+                    efficiently and effectively.”
+                  </p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-lg leading-8 font-semibold">Sarah Tan</h3>
+                  <p class="text-lg leading-8 font-semibold text-[#ff623e]">
+                    Creative Director at Innovate Corp
+                  </p>
+                </div>
+                <div class="basis-[75px]">
+                  <img class="mx-auto" src="/assets/images/Ellipse 1.png" />
+                </div>
+              </div>
+              <!-- Kutipan Icon -->
+              <div
+                class="relative top-[-360px] left-10 w-[46px] max-[393px]:top-[-395px]"
+              >
+                <img src="/assets/images/quote.png" />
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="testimonial-card relative h-[292px] w-[594px] flex-shrink-0 rounded-[18px] bg-gradient-to-br from-[#ff6c37] to-[#dedcdc] p-[1px] max-[393px]:h-[284px] max-[393px]:w-[361px]"
+            data-index="1"
+          >
+            <div
+              class="relative h-full rounded-2xl bg-[#fafafa] dark:bg-[#0A0D12]"
+            >
+              <div class="flex flex-col gap-6 px-6 pt-6">
+                <div class="flex flex-col items-center gap-3">
+                  <div class="flex gap-1">
+                    <img src="/assets/images/Rating.png" />
+                  </div>
+                  <p class="text-center text-lg leading-8 font-semibold">
+                    “The team delivered exactly what we needed — on time and
+                    with outstanding quality. Their attention to detail and
+                    communication were top-notch.”
+                  </p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-lg leading-8 font-semibold">Sarah Tan</h3>
+                  <p class="text-lg leading-8 font-semibold text-[#ff623e]">
+                    Product Manager at Finovate
+                  </p>
+                </div>
+                <div class="basis-[75px]">
+                  <img class="mx-auto" src="/assets/images/Ellipse 1.png" />
+                </div>
+              </div>
+              <div
+                class="relative top-[-360px] left-10 w-[46px] max-[393px]:top-[-425px]"
+              >
+                <img src="/assets/images/quote.png" />
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="testimonial-card relative h-[292px] w-[594px] flex-shrink-0 rounded-[18px] bg-gradient-to-br from-[#ff6c37] to-[#dedcdc] p-[1px] max-[393px]:h-[284px] max-[393px]:w-[361px]"
+            data-index="2"
+          >
+            <div
+              class="relative h-full rounded-2xl bg-[#fafafa] dark:bg-[#0A0D12]"
+            >
+              <div class="flex flex-col gap-6 px-6 pt-6">
+                <div class="flex flex-col items-center gap-3">
+                  <div class="flex gap-1">
+                    <img src="/assets/images/Rating.png" />
+                  </div>
+                  <p class="text-center text-lg leading-8 font-semibold">
+                    “The collaboration was seamless, and the results surpassed
+                    our expectations. Their expertise transformed our ideas into
+                    a successful product.”
+                  </p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-lg leading-8 font-semibold">Sarah Tan</h3>
+                  <p class="text-lg leading-8 font-semibold text-[#ff623e]">
+                    Marketing Head at Tech Solutions
+                  </p>
+                </div>
+                <div class="basis-[75px]">
+                  <img class="mx-auto" src="/assets/images/Ellipse 1.png" />
+                </div>
+              </div>
+              <div
+                class="relative top-[-360px] left-10 w-[46px] max-[393px]:top-[-425px]"
+              >
+                <img src="/assets/images/quote.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dot Navigasi -->
+        <ul class="mt-16 flex justify-center gap-2 max-[393px]:mt-20">
+          <li>
+            <button
+              class="dot h-3 w-3 rounded-full bg-[#ff6c37]"
+              onclick="goToSlide(0)"
+            ></button>
+          </li>
+          <li>
+            <button
+              class="dot h-3 w-3 rounded-full bg-[#e5e5e5]"
+              onclick="goToSlide(1)"
+            ></button>
+          </li>
+          <li>
+            <button
+              class="dot h-3 w-3 rounded-full bg-[#e5e5e5]"
+              onclick="goToSlide(2)"
+            ></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 9. Testimony Section End -->
+
+    <!-- 10.Ask me Section Start -->
+    <section
+      id="FAQ"
+      class="flex w-full flex-col gap-12 bg-white px-[120px] py-20 text-black max-[393px]:px-3.5 max-[393px]:py-10 dark:bg-black dark:text-white"
+    >
+      <div class="flex justify-between max-[393px]:grid">
+        <h2 class="basis-[331px] text-[40px] leading-14 font-bold">
+          Need Help? Start Here.
+        </h2>
+        <p class="basis-[245px] text-lg leading-8 font-medium text-[#717680]">
+          Everything you need to know — all in one place.
+        </p>
+      </div>
+      <!-- Garis atas -->
+      <div class="h-[1px] bg-[#dfdfdf]"></div>
+      <!-- Kontainer utama -->
+      <div class="flex gap-[73px] max-[393px]:flex-col max-[393px]:gap-8">
+        <!-- Kiri: FAQ -->
+        <div class="flex grow flex-col gap-7">
+          <!-- Pertanyaan 1 -->
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h3 class="text-2xl leading-9 font-bold">
+                What services do you offer?
+              </h3>
+              <div
+                class="basis-[24px] cursor-pointer invert filter dark:filter-none"
+              >
+                <img src="/assets/images/Icon.png" />
+              </div>
+            </div>
+            <p class="text-xl leading-[34px] font-medium text-[#717680]">
+              We provide custom web/app development, cloud solutions, UX/UI
+              design, and more.
+            </p>
+          </div>
+          <div class="h-[1px] bg-[#dfdfdf]"></div>
+          <!-- Pertanyaan 2 -->
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h3 class="text-2xl leading-9 font-bold">
+                How do I know if this is right for my business?
+              </h3>
+              <div
+                class="basis-[24px] cursor-pointer invert filter dark:filter-none"
+              >
+                <img src="/assets/images/Icon(1).png" />
+              </div>
+            </div>
+          </div>
+          <div class="h-[1px] bg-[#dfdfdf]"></div>
+          <!-- Pertanyaan 3 -->
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h3 class="text-2xl leading-9 font-bold">
+                How much does a project cost?
+              </h3>
+              <div
+                class="basis-[24px] cursor-pointer invert filter dark:filter-none"
+              >
+                <img src="/assets/images/Icon(1).png" />
+              </div>
+            </div>
+          </div>
+          <div class="h-[1px] bg-[#dfdfdf]"></div>
+          <!-- Pertanyaan 4 -->
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h3 class="text-2xl leading-9 font-bold">
+                How long does it take?
+              </h3>
+              <div
+                class="basis-[24px] cursor-pointer invert filter dark:filter-none"
+              >
+                <img src="/assets/images/Icon(1).png" />
+              </div>
+            </div>
+          </div>
+          <div class="h-[1px] bg-[#dfdfdf]"></div>
+          <!-- Pertanyaan 5 -->
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h3 class="text-2xl leading-9 font-bold">
+                Can I start with a small project first?
+              </h3>
+              <div
+                class="basis-[24px] cursor-pointer invert filter dark:filter-none"
+              >
+                <img src="/assets/images/Icon(1).png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Kanan: Konsultasi -->
+        <div
+          class="flex basis-[329px] flex-col gap-6 rounded-3xl bg-[#cc4e32] p-6"
+        >
+          <div class="flex flex-col gap-1 text-white">
+            <h3 class="text-4xl leading-11 font-bold">Let’s talk it through</h3>
+            <button class="text-lg leading-8 font-semibold active:bg-blue-400">
+              book a free consultation with our team.
+            </button>
+          </div>
+          <img src="/assets/images/Consultation Image.png" />
+          <button
+            onclick="scrollToSection('Form')"
+            class="cursor-pointer rounded-full bg-black p-2 text-center leading-[30px] font-bold text-white active:bg-blue-400 dark:bg-white dark:text-black"
+          >
+            Free consultation
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- 10.Ask me Section End -->
+
+    <!-- 11.Consumer's Contact Section Start -->
+    <!-- Overlay blur untuk latar belakang saat popup muncul -->
+    <div
+      id="overlayBlur"
+      class="fixed inset-0 z-40 hidden bg-black/30 backdrop-blur-sm dark:bg-black/60"
+    ></div>
+    <section
+      id="Form"
+      class="relative flex w-full flex-col gap-16 bg-white px-[140px] py-20 text-black max-[393px]:px-4 dark:bg-black dark:text-white"
+    >
+      <!-- Judul dan deskripsi -->
+      <div class="flex flex-col gap-[11px] text-center">
+        <h2 class="text-[40px] leading-14 font-bold max-[393px]:text-[28px]">
+          Ready to Start? Let’s Talk.
+        </h2>
+        <p
+          class="text-[18px] leading-8 font-medium text-[#717680] max-[393px]:text-[16px]"
+        >
+          Tell us what you need, and we’ll get back to you soon.
+        </p>
+      </div>
+      <!-- Formulir utama -->
+      <form id="contactForm" class="mx-auto w-[720px] max-[393px]:w-full">
+        <fieldset class="flex flex-col gap-10">
+          <!-- Input data -->
+          <div class="flex flex-col gap-5">
+            <!-- Input Nama -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm leading-7 font-bold">Name</label>
+              <input
+                id="nameInput"
+                class="rounded-xl border border-[#dfdfdf] px-4 py-2 leading-[30px] hover:bg-blue-300"
+                type="text"
+                placeholder="Enter your name"
+              />
+            </div>
+            <!-- Input Email -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm leading-7 font-bold">Email</label>
+              <input
+                id="emailInput"
+                class="rounded-xl border border-[#dfdfdf] px-4 py-2 leading-[30px] hover:bg-blue-300"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <!-- Input Pesan -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm leading-7 font-bold">Message</label>
+              <textarea
+                id="messageInput"
+                class="rounded-xl border border-[#dfdfdf] px-4 py-2 leading-[30px] hover:bg-blue-300"
+                rows="4"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <!-- Pilihan layanan -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm leading-7 font-bold">Services</label>
+              <!-- Grid 2 kolom di desktop, 1 kolom di mobile -->
+              <div
+                class="flex gap-[37px] max-[393px]:flex-col max-[393px]:gap-[0px]"
+              >
+                <!-- Kolom kiri -->
+                <div
+                  class="flex basis-[232px] flex-col gap-4 max-[393px]:basis-[0px]"
+                >
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>Web Development</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>Mobile App Development</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>UI/UX Design</span>
+                  </label>
+                </div>
+                <!-- Kolom kanan -->
+                <div
+                  class="flex basis-[232px] flex-col gap-4 max-[393px]:mt-4 max-[393px]:basis-[0px]"
+                >
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>Cloud Solutions</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>Software Development</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox h-[20px] w-[20px] accent-[#FF623E]"
+                    />
+                    <span>Other</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Kirim -->
+          <button
+            id="sendBtn"
+            class="cursor-pointer rounded-full bg-[#ff623e] p-2 leading-[30px] font-bold text-white active:bg-blue-400"
+          >
+            Send
+          </button>
+        </fieldset>
+      </form>
+    </section>
+    <!-- popup message received -->
+    <dialog
+      id="successPopup"
+      class="fixed top-1/2 left-1/2 z-50 mx-auto grid hidden -translate-x-1/2 -translate-y-1/2 grid-cols-1 place-content-center place-items-center items-center rounded-2xl"
+    >
+      <div
+        class="grid h-[225px] w-[518px] place-items-center items-center rounded-t-3xl max-[393px]:h-[160px] max-[393px]:w-[353px] dark:bg-[#0A0D12]"
+      >
+        <img
+          class="mb-6 max-[393px]:h-[140px] max-[393px]:w-[140px]"
+          src="/assets/images/Message received.png"
+          alt="message received"
+        />
+      </div>
+      <div
+        class="grid h-[254px] w-[518px] grid-cols-1 place-content-center place-items-center rounded-b-3xl bg-[#FFFFFF] max-[393px]:h-[214px] max-[393px]:w-[353px] dark:bg-[#000000]"
+      >
+        <p
+          class="w-[400px] text-center text-2xl font-bold max-[393px]:w-[305px] max-[393px]:text-xl dark:text-[#FDFDFD]"
+        >
+          Message Received!<br />
+          <span
+            class="text-xl font-medium text-[#717680] max-[393px]:text-base"
+          >
+            Thanks for reaching out — we’ll get back to you as soon as possible.
+          </span>
+        </p>
+        <button
+          class="mt-10 h-[48px] w-[361px] rounded-full bg-[#FF623E] font-bold text-[#FFFFFF] max-[393px]:w-[305px]"
+        >
+          Back to Home
+        </button>
+      </div>
+    </dialog>
+    <!-- popup message not received -->
+    <dialog
+      id="errorPopup"
+      class="fixed top-1/2 left-1/2 z-50 mx-auto grid hidden -translate-x-1/2 -translate-y-1/2 grid-cols-1 place-content-center place-items-center items-center rounded-2xl"
+    >
+      <div
+        class="grid h-[225px] w-[518px] place-items-center items-center rounded-t-3xl max-[393px]:h-[160px] max-[393px]:w-[353px] dark:bg-[#0A0D12]"
+      >
+        <img
+          class="mb-6 max-[393px]:h-[140px] max-[393px]:w-[140px]"
+          src="/assets/images/Message not received.png"
+          alt="message not received"
+        />
+      </div>
+      <div
+        class="grid h-[254px] w-[518px] grid-cols-1 place-content-center place-items-center rounded-b-3xl bg-[#FFFFFF] max-[393px]:h-[214px] max-[393px]:w-[353px] dark:bg-[#000000]"
+      >
+        <p
+          class="w-[400px] text-center text-2xl font-bold max-[393px]:w-[305px] max-[393px]:text-xl dark:text-[#FDFDFD]"
+        >
+          Oops! Something went wrong.<br />
+          <span
+            class="text-xl font-medium text-[#717680] max-[393px]:text-base"
+          >
+            We couldn’t send your message. Please try again or check your
+            connection.
+          </span>
+        </p>
+        <button
+          class="mt-10 h-[48px] w-[361px] rounded-full bg-[#FF623E] font-bold text-[#FFFFFF] max-[393px]:w-[305px]"
+        >
+          Back to Home
+        </button>
+      </div>
+    </dialog>
+    <!-- 11.Consumer's Contact Section End -->
+
+    <!-- 12. Footer Start -->
+    <section
+      class="w-full bg-white px-[140px] py-10 text-black max-[393px]:px-4 dark:bg-black dark:text-white"
+    >
+      <div
+        class="flex flex-col gap-[60px] rounded-3xl border border-[#dfdfdf] bg-[#fafafa] p-10 max-[393px]:p-6 dark:bg-[#0A0D12]"
+      >
+        <!-- BAGIAN ATAS: FLEX utk desktop, GRID utk mobile -->
+        <div
+          class="flex items-start justify-between max-[393px]:grid max-[393px]:grid-cols-1 max-[393px]:gap-4"
+        >
+          <!-- JUDUL -->
+          <h2
+            class="text-4xl leading-11 font-bold max-[393px]:order-2 max-[393px]:text-3xl max-[393px]:leading-9"
+          >
+            LET'S DISCUSS YOUR IDEAS
+          </h2>
+          <!-- LOGO -->
+          <div
+            class="flex h-[29.59px] w-[150px] scale-150 justify-end pr-7 font-bold max-[393px]:order-1 max-[393px]:justify-start max-[393px]:pr-0 max-[393px]:pl-7"
+          >
+            <img
+              class="w-109px pr-3"
+              src="/assets/images/logo-symbol.png"
+            />Your Logo
+          </div>
+        </div>
+        <!-- GARIS PEMBATAS -->
+        <div class="basis-[1px] bg-[#dfdfdf]"></div>
+        <!-- NAVIGATION & SOCIAL MEDIA -->
+        <div
+          class="flex items-start justify-between max-[393px]:flex-col max-[393px]:gap-6"
+        >
+          <!-- MENU NAVIGASI -->
+          <ul class="flex flex-wrap max-[393px]:flex-col max-[393px]:gap-0">
+            <li>
+              <a class="block rounded-full px-4 py-2" href="#About ">About</a>
+            </li>
+            <li>
+              <a class="block rounded-full px-4 py-2" href="#Service"
+                >Service</a
+              >
+            </li>
+            <li>
+              <a class="block rounded-full px-4 py-2" href="#Projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="block rounded-full px-4 py-2" href="#Testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li><a class="block rounded-full px-4 py-2" href="#FAQ">FAQ</a></li>
+          </ul>
+          <!-- IKON SOSIAL MEDIA -->
+          <ul class="flex gap-4 max-[393px]:self-start max-[393px]:pt-2">
+            <li>
+              <a
+                class="block h-10 w-10 rounded-full border border-[#dfdfdf] py-[9.5px] invert filter dark:filter-none"
+                href="#"
+              >
+                <img class="mx-auto" src="/assets/images/fb.png" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="block h-10 w-10 rounded-full border border-[#dfdfdf] py-[9.5px] invert filter dark:filter-none"
+                href="#"
+              >
+                <img class="mx-auto" src="/assets/images/ig.png" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="block h-10 w-10 rounded-full border border-[#dfdfdf] py-[9.5px] invert filter dark:filter-none"
+                href="#"
+              >
+                <img class="mx-auto" src="/assets/images/in.png" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="block h-10 w-10 rounded-full border border-[#dfdfdf] py-[9.5px] invert filter dark:filter-none"
+                href="#"
+              >
+                <img class="mx-auto" src="/assets/images/tiktok.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 12. Footer End -->
+
+    <!-- a. Script Header-Toggle dark mode-->
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+      }
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        if (document.documentElement.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+
+    <!-- b. Script Header-Hamburger -->
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+      });
+    </script>
+
+    <!-- c. Scrip Button-for link -->
+    <script>
+      function scrollToSection(id) {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+
+    <!-- d. Scrip untuk interaksi di Built for Your Industry Section-->
+    <script>
+      const tabs = document.querySelectorAll('.industry-tab');
+      const cards = document.querySelectorAll('.industry-card');
+      const indicators = document.querySelectorAll('.industry-tab .indicator');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.target;
+          // Tampilkan hanya card yang sesuai
+          cards.forEach((card) => {
+            card.classList.toggle('hidden', card.id !== target);
+          });
+          // Update warna indikator
+          indicators.forEach((indicator) => {
+            indicator.classList.replace('bg-[#ff623e]', 'bg-[#aaa]');
+          });
+          tab
+            .querySelector('.indicator')
+            .classList.replace('bg-[#aaa]', 'bg-[#ff623e]');
+        });
+      });
+    </script>
+
+    <!-- e. Script Geser Slider di Testimony Section End -->
+    <script>
+      let currentSlide = 0;
+      function goToSlide(index) {
+        const slider = document.getElementById('testimonialSlider');
+        const cards = slider.querySelectorAll('.testimonial-card');
+        const isMobile = window.innerWidth <= 393;
+        currentSlide = index;
+        if (isMobile) {
+          const cardWidth = cards[0].offsetWidth + 16; // tambah jarak antar card (gap-4 = 16px)
+          const containerWidth = slider.parentElement.offsetWidth;
+          const offset = index * cardWidth - (containerWidth - cardWidth) / 2;
+          slider.style.transform = `translateX(-${offset}px)`;
+        } else {
+          slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+          dot.classList.remove('bg-[#ff6c37]');
+          dot.classList.add('bg-[#e5e5e5]');
+          if (i === index) {
+            dot.classList.add('bg-[#ff6c37]');
+            dot.classList.remove('bg-[#e5e5e5]');
+          }
+        });
+      }
+      window.addEventListener('resize', () => goToSlide(currentSlide));
+    </script>
+
+    <!-- f. Script validasi form + kontrol popup di Consumer's Contact Section -->
+    <script>
+      document
+        .getElementById('sendBtn')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('nameInput').value.trim();
+          const email = document.getElementById('emailInput').value.trim();
+          const message = document.getElementById('messageInput').value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const successPopup = document.getElementById('successPopup');
+          const errorPopup = document.getElementById('errorPopup');
+          const overlay = document.getElementById('overlayBlur');
+          if (name && emailRegex.test(email) && message) {
+            successPopup.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+          } else {
+            errorPopup.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+          }
+        });
+      document.querySelectorAll('dialog button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.getElementById('successPopup').classList.add('hidden');
+          document.getElementById('errorPopup').classList.add('hidden');
+          document.getElementById('overlayBlur').classList.add('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
